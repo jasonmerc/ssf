@@ -171,7 +171,7 @@ class RemoteUdpPortForwarding : public BaseUserService<Demux> {
         remote_addr_(remote_addr),
         remoteServiceId_(0),
         localServiceId_(0) {
-    relay_fiber_port_ = remote_port_ + (1 << 16);
+    relay_fiber_port_ = remote_port_;
   }
 
   uint32_t GetRemoteServiceId(Demux& demux) {
